@@ -76,5 +76,6 @@
 }
 #root{
   width: 500px;
-  padding: 1rem;;
+  padding: 1rem;
+  height: 500px;
 }

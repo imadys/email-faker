@@ -43,6 +43,7 @@ export default function Home() {
 
         const final = `${values.username}+${day}${month}${year}${hours}${minutes}${seconds}${values.provider}`
         setValue(final)
+        navigator.clipboard.writeText(final)
     }
 
     return (
@@ -100,6 +101,9 @@ export default function Home() {
                         <Input
                             value={value}
                             readOnly
+                            onClick={() => {
+                                navigator.clipboard.writeText(value)                                
+                            }}
                             type="text" id="fakeemail"/>
                     </div>}
                     <Button type="submit">Submit</Button>
